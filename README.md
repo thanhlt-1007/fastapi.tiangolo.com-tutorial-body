@@ -84,3 +84,18 @@ curl -X 'POST' \
         "name": "NAME"
     }'
 ```
+
+### POST /items/price_with_tax
+
+```sh
+curl -X 'POST' \
+    'http://localhost:8000/items/price_with_tax' \
+    -H 'accept: application/json' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "string",
+        "price": 0,
+        "description": "string",
+        "tax": 0
+    }'
+```
