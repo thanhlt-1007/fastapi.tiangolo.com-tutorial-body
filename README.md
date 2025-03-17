@@ -48,3 +48,39 @@ poetry@1.8.2 run fastapi dev tutorial_body/main.py
 ```sh
 curl --location 'localhost:8000/hello'
 ```
+
+### POST /items
+
+```sh
+curl -X 'POST' \
+    'http://localhost:8000/items' \
+    -H 'accept: application/json' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "NAME",
+        "price": 0,
+        "description": "DESCRIPTION",
+        "tax": 0
+    }'
+```
+
+```sh
+curl -X 'POST' \
+    'http://localhost:8000/items' \
+    -H 'accept: application/json' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "NAME",
+        "price": 0
+    }'
+```
+
+```sh
+curl -X 'POST' \
+    'http://localhost:8000/items' \
+    -H 'accept: application/json' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "NAME"
+    }'
+```
