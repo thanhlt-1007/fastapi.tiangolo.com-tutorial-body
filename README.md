@@ -99,3 +99,18 @@ curl -X 'POST' \
         "tax": 0
     }'
 ```
+
+### PUT /items/{item_id}
+
+```sh
+curl -X 'PUT' \
+    'http://localhost:8000/items/1' \
+    -H 'accept: application/json' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "string",
+        "price": 0,
+        "description": "string",
+        "tax": 0
+    }'
+```
