@@ -8,7 +8,7 @@
 
 ```sh
 pyenv install 3.11
-pyenv use 3.11
+pyenv global 3.11
 ```
 
 ## poetry
@@ -19,5 +19,32 @@ pyenv use 3.11
 pipx install --suffix=@1.8.2 poetry==1.8.2
 pipx ensurepath
 source ~/.bashrc
-poetry@1.8.2 --version
+poetry@1.8.2 --version  # Poetry (version 1.8.2)
+```
+
+- Activating the environment
+
+```sh
+poetry@1.8.2 env use python3.11
+poetry@1.8.2 run python --version   # Python 3.11.10
+```
+
+## Install dependencies
+
+```sh
+poetry@1.8.2 install
+```
+
+## FastAPI
+
+```sh
+poetry@1.8.2 run fastapi dev tutorial_body/main.py
+```
+
+## cURL
+
+### GET /hello
+
+```sh
+curl --location 'localhost:8000/hello'
 ```
